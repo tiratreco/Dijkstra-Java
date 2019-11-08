@@ -1,9 +1,14 @@
 package grafo;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Grafo {
-	ArrayList<Vertice> vertices;
-	ArrayList<Aresta> arestas;
+	private ArrayList<Vertice> vertices;
+	private ArrayList<Aresta> arestas;
+	
+	public Aresta getAresta(int indice) {
+		return arestas.get(indice);
+	}
 	
 	public Grafo(Vertice vertice) {
 		vertices = new ArrayList<Vertice>();
@@ -44,15 +49,9 @@ public class Grafo {
 	public Vertice getVertice(int num) {
 		return vertices.get(num);
 	}
-	private ArrayList<Vertice> verticesLigados(Vertice v){
-		ArrayList<Vertice> vertices = new ArrayList();
-		for(Aresta a: arestas) {
-			if(v == a.getVerticeA1())
-				vertices.add(a.getVerticeB1());
-			if(v == a.getVerticeB1())
-				vertices.add(a.getVerticeA1());
+	public void imprimirDistancias() {
+		for(Vertice v: vertices) {
+			System.out.println("Vertice "+ v.getNumero() + " Distancia = " + v.getDistancia());
 		}
-		return vertices;
 	}
-
 }
