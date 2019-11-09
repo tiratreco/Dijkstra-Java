@@ -12,20 +12,14 @@ public class Aresta {
 		this.verticeA = verticeA;
 		this.verticeB = verticeB;
 	}
-	/*public ArrayList<Vertice> getVertices() {
-		ArrayList<Vertice> vertices = new ArrayList();
-		vertices.add(verticeA);
-		vertices.add(verticeB);
-		return vertices;
-	}*/
 	public int getTamanho() {
 		return tamanho;
 	}
-	public int getVerticeA() {
-		return verticeA.getNumero();
+	public String getVerticeA() {
+		return verticeA.getNome();
 	}
-	public int getVerticeB() {
-		return verticeB.getNumero();
+	public String getVerticeB() {
+		return verticeB.getNome();
 	}
 	public Vertice getVerticeA1() {
 		return verticeA;

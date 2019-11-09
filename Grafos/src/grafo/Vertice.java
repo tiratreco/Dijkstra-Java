@@ -4,17 +4,17 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Vertice {
-	private int numero;
+	private String nome;
 	private int distancia;
 	private Vertice vem;
 	
-	public Vertice(int numero) {
-		this.numero = numero;
+	public Vertice(String nome) {
+		this.nome = nome;
 		distancia=99999999;
 		vem=null;
 	}
-	public int getNumero() {
-		return numero;
+	public String getNome() {
+		return nome;
 	}
 	public void novaDistancia(int distancia, Vertice vem) {
 		if(distancia<this.distancia) {
