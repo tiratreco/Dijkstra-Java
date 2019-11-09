@@ -5,6 +5,7 @@ import java.util.HashMap;
 public class Grafo {
 	private ArrayList<Vertice> vertices;
 	private ArrayList<Aresta> arestas;
+	private int tamanhoMinimo;
 	
 	public Aresta getAresta(int indice) {
 		return arestas.get(indice);
@@ -53,5 +54,19 @@ public class Grafo {
 		for(Vertice v: vertices) {
 			System.out.println("Vertice "+ v.getNumero() + " Distancia = " + v.getDistancia());
 		}
+	}
+	public Aresta ligacao(Vertice v1, Vertice v2) {
+		for(Aresta a : arestas) {
+			if((a.getVerticeA1()==v1 && a.getVerticeB1()==v2)||(a.getVerticeA1()==v2 && a.getVerticeB1()==v1)) {
+				return a;
+			}
+		}
+		return null;
+	}
+	public void setTamanhoMinimo(int tamanhoMinimo) {
+		this.tamanhoMinimo=tamanhoMinimo;
+	}
+	public int getTamanhoMinimo() {
+		return tamanhoMinimo;
 	}
 }
