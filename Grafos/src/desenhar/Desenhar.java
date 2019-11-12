@@ -13,6 +13,7 @@ public class Desenhar extends JFrame {
 	private int xBase = 500;
 	private int yBase = 400;
 	private int menorCaminho;
+	private int tamanhoBolinha = 10;
 
 	public Desenhar(Grafo grafo) {
 		setSize(1200, 900);
@@ -51,8 +52,8 @@ public class Desenhar extends JFrame {
 			posicaoY.add(y);
 			vertice = vertices.get(contador);
 			nomes.add(vertice.getNome());
-			g.drawOval(x, y, 10, 10);
-			g.fillOval(x, y, 10, 10);
+			g.drawOval(x, y, tamanhoBolinha, tamanhoBolinha);
+			g.fillOval(x, y, tamanhoBolinha, tamanhoBolinha);
 			g.drawString(vertice.getNome(), x + 3, y - 5);
 			contador++;
 		} while (contador != vertices.size());

@@ -29,9 +29,10 @@ public class Grafo {
 
 	public Vertice procurarVertice(String nome) {
 		for (Vertice v : vertices) {
-			if (v.getNome() == nome)
+			if (nome.equals(v.getNome()))
 				return v;
 		}
+		System.out.println("Nome não encontrado!");
 		return null;
 	}
 
